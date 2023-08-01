@@ -21,7 +21,7 @@
 </script>
 
 <div class="relative z-0 h-screen flex flex-col items-center justify-center bg-pink-200">
-	<div class="bg-white/80 w-1/2 max-w-xs shadow-sm rounded-lg backdrop-blur-3xl px-3 pt-3 pb-4">
+	<div class="bg-white/80 w-2/3 max-w-xs shadow-sm rounded-lg backdrop-blur-3xl px-3 pt-4 pb-5">
 		<div class="flex flex-col items-center justify-center">
 			<h1 class="text-3xl">👨‍💻</h1>
 			<span class="text-xs text-zinc-600 my-3">Frontend Developer</span>
