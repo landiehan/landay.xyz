@@ -37,7 +37,7 @@
 		<img
 			src={tool.iconSrc}
 			alt=""
-			class="object-contain blur-lg absolute -z-10 w-3/4 h-auto max-w-2xl"
+			class="object-contain blur-lg absolute -z-10 w-3/4 h-auto max-w-2xl max-h-[50vh]"
 			transition:fade
 		/>
 	{/key}
