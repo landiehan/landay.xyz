@@ -1,35 +1,20 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { tools } from '$lib';
+	import { linear } from 'svelte/easing';
 	import { fly } from 'svelte/transition';
 
-	let tools = ['React', 'Vue', 'Svelte'];
-	let i = 0;
-
-	onMount(() => {
-		const interval = setInterval(() => {
-			i += 1;
-			i %= tools.length;
-		}, 2000);
-
-		return () => {
-			clearInterval(interval);
-		};
-	});
+	export let tool = tools[0];
 </script>
 
-<p>
-	I use {#key i}
-		<span in:fly={{ y: 20 }}>{tools[i]}</span>
+<div class="relative w-full min-h-[16px]">
+	{#key tool.name}
+		<div
+			class="flex gap-1 w-full absolute justify-center"
+			in:fly={{ y: 20, easing: linear }}
+			out:fly={{ y: -20, easing: linear }}
+		>
+			<img src={tool.iconSrc} alt="" width="16" height="16" />
+			<span class="capitalize text-sm font-mono" style="color:{tool.brandColor}"> {tool.name}</span>
+		</div>
 	{/key}
-</p>
-
-<style>
-	p {
-		font-family: monospace;
-		padding-block: 0.5rem;
-	}
-
-	span {
-		display: inline-block;
-	}
-</style>
+</div>

@@ -1,7 +1,5 @@
-<slot />
+<script>
+	import '../app.css';
+</script>
 
-<style>
-	:global(*) {
-		margin: 0;
-	}
-</style>
+<slot />
